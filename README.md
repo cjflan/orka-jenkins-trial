@@ -4,10 +4,9 @@ Automatic Creation and Configuration of Orka and Jenkins
 ## Usage
 1. Install Docker Desktop
 2. Download IP Plan from MacStadium Portal
-4. Download openconnect using `brew install openconnect`
 3. Clone this repo locally
 4. Input credentials from IP Plan into Dockerfile
-5. Run setup.sh
+5. Run the below commands
 6. Go to localhost:8080 and click the run button for the Orka Pipeline job
 
 ## Commands
