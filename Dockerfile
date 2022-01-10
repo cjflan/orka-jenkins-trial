@@ -2,17 +2,20 @@ FROM jenkins/jenkins:lts
 
 # Found in Orka IP Plan
 ARG ORKA_LICENSE 
-
 ARG FIREWALL_IP 
 ARG FIREWALL_USER 
 ARG FIREWALL_PASS 
-
 
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 ENV JENKINS_USER admin
 ENV JENKINS_PASS admin
 ENV ORKA_USER automated@jenkins.com
 ENV ORKA_PASS automated-jenkins
+
+ENV ORKA_LICENSE=$ORKA_LICENSE
+ENV FIREWALL_IP=$FIREWALL_IP
+ENV FIREWALL_USER=$FIREWALL_USER
+ENV FIREWALL_PASS=$FIREWALL_PASS
 
 USER root
 RUN apt-get update

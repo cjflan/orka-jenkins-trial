@@ -14,11 +14,11 @@ Automatic Creation and Configuration of Orka and Jenkins
 1. `git clone https://github.com/cjflan/orka-jenkins-trial.git`
 2. Build the Docker Image
 ```
-docker build --build-arg ORKA_LICENSE=     \
-             --build-arg FIREWALL_IP=      \
+docker build --build-arg FIREWALL_IP=      \
              --build-arg FIREWALL_USER=    \
              --build-arg FIREWALL_PASS=    \
+             --build-arg ORKA_LICENSE=     \
              --tag orka/plugins:jenkins-demo .
 ```
 3. `docker run -d --privileged -p 8080:8080 -p 50000:50000 --name orka-jenkins orka/plugins:jenkins-demo`
-4. `docker exec -ti orka-jenkins ./usr/share/orka/entrypoint.sh`
+4. `docker exec -ti orka-jenkins ./usr/share/orka/configure.sh`

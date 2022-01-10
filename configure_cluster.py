@@ -92,7 +92,7 @@ def main(qc):
     print('Deploying VM.....')
     qc.deploy_vm_config()
 
-    print('downloading java...')
+    print('Downloading Java...')
     qc.run('curl -Lo ~/adoptopenjdk.tar.gz https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u312-b07/OpenJDK8U-jdk_x64_mac_hotspot_8u312b07.tar.gz')
     qc.run('tar xzf adoptopenjdk.tar.gz')
     qc.run('mkdir ~/jdk')
@@ -101,9 +101,10 @@ def main(qc):
     qc.run('rm -rf ~/jdk8u312-b07')
     time.sleep(30)
 
-    print('saving image')
+    print('Saving image, this may take a while')
     qc.save_image() 
     
+    print('Purging VM')
     qc.purge_vm()
     
     qc.delete_token()
