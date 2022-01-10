@@ -1,0 +1,11 @@
+credentials-binding:latest
+embeddable-build-status:latest
+ssh-agent:latest
+timestamper:latest
+gradle:latest
+workflow-aggregator:latest
+git:latest
+git-parameter:latest
+ssh-slaves:latest
+greenballs:latest
+macstadium-orka:latest
