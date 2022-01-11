@@ -1,6 +1,6 @@
 #!/bin/bash
 
-script -c "echo no | openconnect 199.7.162.42" /usr/share/orka/log.log 
+script -c "echo no | openconnect $FIREWALL_IP" /usr/share/orka/log.log 
 grep 'pin-sha256:' /usr/share/orka/log.log | sed 's/.*://' > /usr/share/orka/servercert_nl.txt
 awk '{print substr($0, 1, length($0)-1)}' /usr/share/orka/servercert_nl.txt > /usr/share/orka/servercert.txt
 
